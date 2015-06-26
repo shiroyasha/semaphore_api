@@ -4,6 +4,8 @@ Unofficial Ruby wrapper around Semaphore's API
 
 ![SemaphoreCI](http://fc04.deviantart.net/fs71/f/2013/081/4/d/futurama__zoidberg__banner_by_daspoony-d5yvo0t.jpg)
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/bf784948-b2c9-4085-8dc8-6c198f6ccb64/468031/badge.svg)](https://semaphoreci.com/shiroyasha/semaphore_api)
+
 ## Usage
 
 Start by contructing a client
