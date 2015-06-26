@@ -25,6 +25,7 @@ module SemaphoreApi
       @end_point || "https://semaphoreci.com"
     end
 
+    # hide auth_token
     def inspect
       super.gsub! @auth_token, "*******"
     end
