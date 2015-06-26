@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = SemaphoreApi::VERSION
   spec.authors       = ["Igor Sarcevic"]
   spec.email         = ["igisar@gmail.com"]
+  spec.licence       = "MIT"
 
   spec.summary       = %q{Unofficial wrapper around SemaphoreCI's API}
   spec.homepage      = ""
