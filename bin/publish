@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "semaphore_api"
+
+system("gem build semaphore_api.gemspec && gem push semaphore_api-#{SemaphoreApi::VERSION}.gem; rm -f semaphore_api-#{SemaphoreApi::VERSION}.gem")
