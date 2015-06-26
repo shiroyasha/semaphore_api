@@ -21,19 +21,19 @@ projects = semaphore.projects
 Display their names
 
 ``` rb
-puts projects.map(&:name)
+puts projects.pluck(&:name)
 ```
 
 Find projects via their name
 
 ``` rb
-sempahore_api = projects.find { |project| project.name == "semaphore_api" }
+sempahore_api = projects.find_by(:name => "semaphore_api")
 ```
 
 Display active branches for a project
 
 ``` rb
-semaphore_api.branches.map(&:branch_name) # => ["master", "development"]
+semaphore_api.branches.pluck(:branch_name) # => ["master", "development"]
 ```
 
 List all the webhooks for a project
@@ -45,7 +45,7 @@ webhooks = client.webhooks(semaphore_api.hash_id)
 Collect information about a build
 
 ``` rb
-master = semaphore_api.branches.find { |branch| branch.name == "master" }
+master = semaphore_api.branches.find_by(:name => "master")
 
 build = client.build_status(semaphore_api.hash_id, master.branch_id)
 ```
