@@ -1,10 +1,12 @@
 require "zoid"
 
 require "semaphore_api/client/projects"
+require "semaphore_api/client/branches"
 
 module SemaphoreApi
   class Client
     include SemaphoreApi::Client::Projects
+    include SemaphoreApi::Client::Branches
 
     def initialize(auth_token, end_point=nil)
       @auth_token = auth_token
