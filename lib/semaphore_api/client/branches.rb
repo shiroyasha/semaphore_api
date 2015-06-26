@@ -1,6 +1,6 @@
 module SemaphoreApi
   class Client
-    module Projects
+    module Branches
 
       def branches(project_hash_id)
         get "/projects/#{project_hash_id}/branches"

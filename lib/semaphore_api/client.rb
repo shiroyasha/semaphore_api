@@ -5,6 +5,7 @@ require "semaphore_api/client/branches"
 require "semaphore_api/client/webhooks"
 require "semaphore_api/client/builds"
 require "semaphore_api/client/servers"
+require "semaphore_api/client/deploys"
 
 module SemaphoreApi
   class Client
@@ -13,6 +14,7 @@ module SemaphoreApi
     include SemaphoreApi::Client::WebHooks
     include SemaphoreApi::Client::Builds
     include SemaphoreApi::Client::Servers
+    include SemaphoreApi::Client::Deploys
 
     def initialize(auth_token, end_point=nil)
       @auth_token = auth_token
