@@ -1,4 +1,8 @@
-# SemaphoreApi &mdash; Unofficial Ruby wrapper around Semaphore's API
+# SemaphoreApi
+
+Unofficial Ruby wrapper around Semaphore's API
+
+![SemaphoreCI](http://fc04.deviantart.net/fs71/f/2013/081/4/d/futurama__zoidberg__banner_by_daspoony-d5yvo0t.jpg)
 
 ## Usage
 
