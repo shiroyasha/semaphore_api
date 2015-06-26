@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.licence       = "MIT"
 
   spec.summary       = %q{Unofficial wrapper around SemaphoreCI's API}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/shiroyasha/semaphore_api"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
