@@ -22,7 +22,13 @@ module SemaphoreApi
     end
 
     def get(path, options = {})
-      response = agent.get("/api/v1/#{path}", {:auth_token => @auth_token})
+      response = agent.get("/api/v1/#{path}", options.merge(:auth_token => @auth_token))
+
+      response.body
+    end
+
+    def post(path, options = {})
+      response = agent.post("/api/v1/#{path}", options.merge(:auth_token => @auth_token))
 
       response.body
     end
