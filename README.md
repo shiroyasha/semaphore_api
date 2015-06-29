@@ -29,27 +29,27 @@ puts projects.pluck(&:name)
 Find projects via their name
 
 ``` rb
-sempahore_api = projects.find_by(:name => "semaphore_api")
+zoid = projects.find_by(:name => "zoid")
 ```
 
 Display active branches for a project
 
 ``` rb
-semaphore_api.branches.pluck(:branch_name) # => ["master", "development"]
+zoid.branches.pluck(:branch_name) # => ["master", "development"]
 ```
 
 List all the webhooks for a project
 
 ``` rb
-webhooks = client.webhooks(semaphore_api.hash_id)
+webhooks = client.webhooks(zoid.hash_id)
 ```
 
 Collect information about a build
 
 ``` rb
-master = semaphore_api.branches.find_by(:name => "master")
+master = zoid.branches.find_by(:name => "master")
 
-build = client.build_status(semaphore_api.hash_id, master.branch_id)
+build = client.build_status(zoid.hash_id, master.branch_id)
 ```
 
 ## Development
