@@ -33,6 +33,18 @@ module SemaphoreApi
       response.body
     end
 
+    def put(path, options = {})
+      response = agent.put("/api/v1/#{path}", options.merge(:auth_token => @auth_token))
+
+      response.body
+    end
+
+    def delete(path, options = {})
+      response = agent.delete("/api/v1/#{path}", options.merge(:auth_token => @auth_token))
+
+      response.body
+    end
+
     def agent
       @agent ||= Zoid::Agent.new(end_point)
     end
